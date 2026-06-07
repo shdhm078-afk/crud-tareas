@@ -1,4 +1,6 @@
 <?php
+// ERROR: esta línea no debería estar aquí
+$variableError = "esto rompe el proyecto";
 $file = 'tareas.json';
 $tareas = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 
