@@ -32,8 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-<h1>✅ Gestor de Tareas - Versión Colaborador</h1>
-<p style="color:gray; font-size:13px;">Última actualización: <?= date('d/m/Y') ?></p>
+<h1>✅ Gestor de Tareas - Versión Colaborativa Final</h1>
 <p>Total: <?= count($tareas) ?> | Pendientes: <?= count(array_filter($tareas, fn($t) => !$t['hecha'])) ?></p>
 <form method="POST">
     <input type="hidden" name="accion" value="crear">
