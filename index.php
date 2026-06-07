@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
         h1 { color: #333; }
         input[type=text] { padding: 8px; width: 70%; }
-        button { padding: 8px 16px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        button { padding: 8px 16px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
         li { margin: 8px 0; }
     </style>
 </head>
 <body>
-<h1>Gestor de Tareas - CRUD</h1>
+<h1>✅ Gestor de Tareas</h1><p style="color:gray; font-size:13px;">Última actualización: <?= date('d/m/Y') ?></p>
 <p>Total: <?= count($tareas) ?> | Pendientes: <?= count(array_filter($tareas, fn($t) => !$t['hecha'])) ?></p>
 <form method="POST">
     <input type="hidden" name="accion" value="crear">
